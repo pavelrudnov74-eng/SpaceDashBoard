@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/history.css">
+    <script src="frontend/js/app.js" defer></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-wrap">
+                <ul class="navbar-menu">
+                    <li><a href="index.html">Расписание</a></li>
+                    <li><a href="agency.html">Агенства</a></li>
+                    <li><a href="kosmodrom.html">Космодромы</a></li>
+                    <li><a href="ka.html">РН и КА</a></li>
+                    <li><a href="history.html">История</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="main-header">
+        <div class="layers">
+            <div class="layer__header">
+                <div class="layers__caption">Космические</div>
+                <div class="layers__title">Аппараты</div>
+            </div>
+            <div class="layer layers__base" style="background-image: url(img/fon.png);"></div>
+
+            <div class="layer layers__front" style="background-image: url(img/history.png);"></div>
+        </div>
+    </header>
+    <header class="chapter-header">
+
+        <div class="button-container">
+
+            <div class="chapter-wrapper">
+                <button class="chapter-btn" onclick="location.href='#chap1'">Глава 1</button>
+                <audio controls>
+                    <source src="audio/one.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <!-- Глава 2 -->
+            <div class="chapter-wrapper">
+                <button class="chapter-btn" onclick="location.href='#chap1'">Глава 2</button>
+                <audio controls>
+                    <source src="two.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="chapter-wrapper">
+                <button class="chapter-btn" onclick="location.href='#chap1'">Глава 3</button>
+                <audio controls>
+                    <source src="audio/one.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <div class="layer layers__hifon1" style="background-image: url(img/hifon1.png);"></div>
+            <div class="layer layers__hifon2" style="background-image: url(img/hifon2.png);"></div>
+            <div class="layer layers__hifon3" style="background-image: url(img/hifon3.png);"></div>
+            <div class="layer layers__hifon4" style="background-image: url(img/hifon4.png);"></div>
+        </div>
+    </header>
+    <div class="text">
+        <div id="chap1" class="chapter">
+            <h2>Глава 1. Знакомство</h2>
+            <p>Длинный текст главы.<br>.eeeeeeeeeeeeeeeeeeeeeeeeee.</p>
+        </div>
+
+        <div id="chap2" class="chapter">
+            <h2>Глава 2. Развитие сюжета</h2>
+            <p>Текст второй главы...</p>
+        </div>
+
+        <div id="chap3" class="chapter">
+            <h2>Глава 3. Развязка</h2>
+            <p>Текст третьей главы<br>fffffff<br></p>
+        </div>
+    </div>
+    <script src="frontend/js/audio.js"></script>
+</body>
+
+</html>

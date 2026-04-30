@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --index: calc(1vw + 1vh)
+}
+
+@font-face {
+    font-family: raleway f;
+    src: url(../fonts/raleway-regular.woff2);
+}
+
+@font-face {
+    font-family: raleway f;
+    src: url(../fonts/raleway-black.woff2);
+    font-weight: 900;
+}
+
+body {
+    background-color: #091935;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-family: raleway_f, sans-serif;
+    line-height: 1.;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 10;
+    background: transparent;
+    background-color: #0c0c0c;
+    box-shadow: 0 20px 10px rgba(0, 0, 0, .1);
+    border: 2px solid #185659;
+    border-radius: 10px;
+}
+
+.navbar-menu {
+    margin-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    padding: 20px 0;
+}
+
+.logo {
+    position: absolute;
+    left: 20;
+    top: 50%;
+    z-index: 10;
+}
+
+.logo img {
+    display: block;
+    height: 50;
+    width: auto;
+}
+
+.navbar-menu a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.7;
+    font-family: inherit;
+    transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+    color: #ccc;
+}
+
+.button-container {
+    position: relative;
+    z-index: 2;
+    background-image: url(../img/fon.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 1vh;
+
+}
+
+.chapter-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 40px;
+    width: 100%;
+    height: auto;
+
+}
+
+audio {
+    width: 70vh;
+    filter: invert(100%);
+    transform: translate3d(0, calc(var(--scrollTop) / -5), 0);
+
+}
+
+button {
+    text-align: left;
+
+    padding-left: 30px;
+    font-family: raleway_f, sans-serif;
+    font-size: 17px;
+    background-color: #0d0d0d;
+    border: 2px solid #185659;
+    color: rgb(255, 255, 255);
+    transform: translate3d(0, calc(var(--scrollTop) / -5), 0);
+    width: 500px;
+    /* Ширина */
+    height: 100px;
+    /* Высота */
+    border-radius: 20px;
+    /* небольшое скругление */
+}
+
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* height: 100vh;  <-- УДАЛИТЕ ЭТУ СТРОКУ */
+    min-height: 100vh;
+    /* Используйте это, чтобы фон был минимум на весь экран */
+    background-image: url(../img/fon.png);
+    background-attachment: fixed;
+    /* Чтобы фон красиво стоял, пока текст скроллится */
+    background-size: cover;
+}
+
+h2 {
+    color: white !important;
+    /* Сделает заголовки белыми */
+    display: block !important;
+    /* Убедится, что они видны */
+    margin-top: 20px;
+    /* Добавит отступ сверху */
+    font-family: Arial, sans-serif;
+    /* Шрифт для чистоты */
+    text-align: center;
+    /* Центрирует текст */
+    width: 100%;
+}
+
+
+
+/* Также настроим сам текст, чтобы он не прилипал к краям */
+.content {
+    background-color: #c2a375;
+    /* Черный цвет с прозрачностью 60% */
+    padding: 20px;
+    /* Внутренние отступы, чтобы текст не лип к краям */
+    border-radius: 10px;
+    color: #000000;
+    /* Чуть сероватый текст лучше читается на черном */
+    line-height: 1.8;
+    /* Увеличиваем межстрочный интервал */
+    font-family: sans-serif;
+     font-size: 18px;
+    margin-bottom: 40px;
+    /* Отступ между главами */
+    white-space: pre-wrap;
+    /* Сохраняет абзацы из текстового файла */
+    
+}
+
+.main-header {
+    position: relative;
+}
+
+.layers {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    position: relative;
+}
+
+.layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    z-index: 2;
+}
+
+.layers__base {
+    z-index: 0;
+}
+
+.layers__front {
+    top: 200px;
+    height: 400px;
+    width: 400px;
+
+    transform: translate3d(0, calc(var(--scrollTop) / -1), 0);
+}
+
+.layers__hifon1 {
+    top: 80px;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    transform: translate3d(0, calc(var(--scrollTop) / -3), 0);
+}
+
+.layers__hifon2 {
+    top: 300px;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    transform: translate3d(0, calc(var(--scrollTop) / -1.8), 0);
+}
+
+.layers__hifon3 {
+    top: 70px;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    transform: translate3d(0, calc(var(--scrollTop) / -2.5), 0);
+}
+
+.layers__hifon4 {
+    top: 200px;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    transform: translate3d(0, calc(var(--scrollTop) / -2), 0);
+}
+
+.layer__header {
+    z-index: 1;
+    transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+    will-change: transform;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.layers__caption {
+    position: absolute;
+    top: -90px;
+    left: -500px;
+    font-size: calc(var(--index) / 0.3);
+    letter-spacing: calc(var(--index) / 2.5);
+    margin-top: calc(var(--index) * -0.75);
+    transform: translate3d(calc(var(--scrollTop) / -3), calc(var(--scrollTop) / -1), 0);
+}
+
+.layers__title {
+    position: absolute;
+    top: 30px;
+    left: 100px;
+    font-size: calc(var(--index) / 0.5);
+    letter-spacing: calc(var(--index) / 2.5);
+    margin-top: calc(var(--index) * -0.75);
+    transform: translate3d(calc(var(--scrollTop) / 1), calc(var(--scrollTop) / -1), 0);
+}
