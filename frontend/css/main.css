@@ -62,8 +62,7 @@ body {
 }
 
 .logo img {
-    height: 70px;
-    /* Настрой размер ракеты под себя */
+    height: 70px; /* Настрой размер ракеты под себя */
     width: auto;
     display: block;
 }

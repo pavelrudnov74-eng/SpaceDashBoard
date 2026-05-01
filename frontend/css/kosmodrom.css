@@ -20,26 +20,29 @@
 }
 
 body {
-    background-color: #091935;
+    background-image: url("../img/fon.png");
+    width: 100%;
+    height: 100vh;
     background-size: cover;
     background-position: center;
     color: #fff;
     font-family: raleway_f, sans-serif;
-    line-height: 1.;
-    background-repeat: no-repeat;
+    line-height: 1.55
 }
+
+/*панель навигации:*/
 
 .navbar {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px;
+    height: 80px;
     z-index: 10;
     background: transparent;
-    background-color: #0c0c0c;
-    box-shadow: 0 20px 10px rgba(0, 0, 0, .1);
-    border: 2px solid #185659;
+    background-color: #000000;
+    border: 2px solid #7b7b7b;
+    box-shadow: 0 20px 10px rgba(168, 168, 168, 0.1);
     border-radius: 10px;
 }
 
@@ -51,83 +54,43 @@ body {
     list-style: none;
     gap: 50px;
     padding: 20px 0;
+    padding-top: 26px;
 }
 
 .navbar-menu a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
-    opacity: 0.7;
-    font-family: inherit;
-    transition: color 0.3s;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    /* Все буквы заглавные (стиль космодрома) */
+    margin-bottom: 25px;
+    font-size: 16px;
+    padding-top: 20px;
+    /* Настройте это число под себя */
+    padding-bottom: 20px;
 }
 
 .navbar-menu a:hover {
     color: #ccc;
 }
 
-.button-container {
-    position: relative;
-    z-index: 2;
-    background-image: url(../img/fon.png);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: auto;
+/*обработка логотипа: */ 
 
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    gap: 1vh;
-
-}
-.chapter-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 40px;
-    width: 100%;
-    height: auto;
-    
+.logo {
+    position: absolute;
+    left: 20;
+    top: 5%;
+    z-index: 10;
 }
 
-audio {
-    width: 70vh;
-    filter: invert(100%);
-    
+.logo img {
+    height: 70px; 
+    width: auto;
+    display: block;
 }
 
-button {
-    text-align: left;
-
-    padding-left: 30px;
-    font-family: raleway_f, sans-serif;
-    font-size: 17px;
-    background-color: #0d0d0d;
-    border: 2px solid #185659;
-    color: rgb(255, 255, 255);
-    transform: translate3d(0, calc(var(--scrollTop) / -5), 0);
-    width: 500px;
-    /* Ширина */
-    height: 100px;
-    /* Высота */
-    border-radius: 20px;
-    /* небольшое скругление */
-}
-
-
-.text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-image: url(../img/fon.png);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100vh;
-}
-
+ /*надписи и фон:*/
 
 .main-header {
     position: relative;
@@ -165,43 +128,6 @@ button {
     transform: translate3d(0, calc(var(--scrollTop) / -1), 0);
 }
 
-.layers__hifon1 {
-    top: 80px;
-    position: absolute;
-    z-index: -1;
-    object-fit: cover;
-    width: 100%;
-    height: 100vh;
-    transform: translate3d(0, calc(var(--scrollTop) / -3), 0);
-}
-.layers__hifon2 {
-    top: 300px;
-    position: absolute;
-    z-index: -1;
-    object-fit: cover;
-    width: 100%;
-    height: 100vh;
-    transform: translate3d(0, calc(var(--scrollTop) / -1.8), 0);
-}
-.layers__hifon3 {
-    top: 70px;
-    position: absolute;
-    z-index: -1;
-    object-fit: cover;
-    width: 100%;
-    height: 100vh;
-    transform: translate3d(0, calc(var(--scrollTop) / -2.5), 0);
-}
-.layers__hifon4 {
-    top: 200px;
-    position: absolute;
-    z-index: -1;
-    object-fit: cover;
-    width: 100%;
-    height: 100vh;
-    transform: translate3d(0, calc(var(--scrollTop) / -2), 0);
-}
-
 .layer__header {
     z-index: 1;
     transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
@@ -213,19 +139,9 @@ button {
 .layers__caption {
     position: absolute;
     top: -90px;
-    left: -500px;
-    font-size: calc(var(--index) / 0.3);
-    letter-spacing: calc(var(--index) / 2.5);
-    margin-top: calc(var(--index) * -0.75);
-    transform: translate3d(calc(var(--scrollTop) / -3), calc(var(--scrollTop) / -1), 0);
-}
-
-.layers__title {
-    position: absolute;
-    top: 30px;
-    left: 100px;
+    left: -200px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
     font-size: calc(var(--index) / 0.5);
     letter-spacing: calc(var(--index) / 2.5);
     margin-top: calc(var(--index) * -0.75);
-    transform: translate3d(calc(var(--scrollTop) / 1), calc(var(--scrollTop) / -1), 0);
 }
