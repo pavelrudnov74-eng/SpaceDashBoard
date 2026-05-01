@@ -14,11 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
             })
             .then(text => {
                 // Вставляем текст в блок
-                block.innerText = text; 
+                block.innerHTML = text; 
             })
             .catch(error => {
                 console.error('Ошибка загрузки:', error);
-                block.innerText = "Не удалось загрузить текст.";
+                block.innerHTML = "Не удалось загрузить текст.";
             });
     });
 });

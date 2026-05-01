@@ -5,7 +5,7 @@
 }
 
 :root {
-    --index: calc(1vw + 1vh)
+    --index: calc(1vw + 1vh);
 }
 
 @font-face {
@@ -34,12 +34,12 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px;
+    height: 80px;
     z-index: 10;
     background: transparent;
-    background-color: #0c0c0c;
-    box-shadow: 0 20px 10px rgba(0, 0, 0, .1);
-    border: 2px solid #185659;
+    background-color: #000000;
+    border: 2px solid #7b7b7b;
+    box-shadow: 0 20px 10px rgba(168, 168, 168, 0.1);
     border-radius: 10px;
 }
 
@@ -51,37 +51,45 @@ body {
     list-style: none;
     gap: 50px;
     padding: 20px 0;
+    padding-top: 30px;
 }
 
 .logo {
     position: absolute;
     left: 20;
-    top: 50%;
+    top: 5%;
     z-index: 10;
 }
 
 .logo img {
-    display: block;
-    height: 50;
+    height: 70px;
+    /* Настрой размер ракеты под себя */
     width: auto;
+    display: block;
 }
 
 .navbar-menu a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
-    opacity: 0.7;
-    font-family: inherit;
-    transition: color 0.3s;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    /* Все буквы заглавные (стиль космодрома) */
+    margin-bottom: 25px;
+    font-size: 16px;
+    padding-top: 20px;
+    /* Настройте это число под себя */
+    padding-bottom: 20px;
 }
 
 .navbar-menu a:hover {
-    color: #ccc;
+    color: #7e7e7e;
 }
 
 .button-container {
     position: relative;
     z-index: 2;
-    background-image: url(../img/fon.png);
+    background-image: url(../img/fonh.png);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -90,7 +98,7 @@ body {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    gap: 1vh;
+   
 
 }
 
@@ -108,8 +116,6 @@ body {
 audio {
     width: 70vh;
     filter: invert(100%);
-    transform: translate3d(0, calc(var(--scrollTop) / -5), 0);
-
 }
 
 button {
@@ -119,15 +125,16 @@ button {
     font-family: raleway_f, sans-serif;
     font-size: 17px;
     background-color: #0d0d0d;
-    border: 2px solid #185659;
+    border: 2px solid #7b7b7b;
     color: rgb(255, 255, 255);
-    transform: translate3d(0, calc(var(--scrollTop) / -5), 0);
+
     width: 500px;
     /* Ширина */
     height: 100px;
     /* Высота */
     border-radius: 20px;
     /* небольшое скругление */
+    margin-top: 60px;
 }
 
 
@@ -145,8 +152,8 @@ button {
     background-size: cover;
 }
 
-h2 {
-    color: white !important;
+h3 {
+    color: #ffffff !important;
     /* Сделает заголовки белыми */
     display: block !important;
     /* Убедится, что они видны */
@@ -154,6 +161,7 @@ h2 {
     /* Добавит отступ сверху */
     font-family: Arial, sans-serif;
     /* Шрифт для чистоты */
+    font-size: 40px;
     text-align: center;
     /* Центрирует текст */
     width: 100%;
@@ -163,22 +171,23 @@ h2 {
 
 /* Также настроим сам текст, чтобы он не прилипал к краям */
 .content {
-    background-color: #c2a375;
+    background-color: #ffffffd8;
     /* Черный цвет с прозрачностью 60% */
     padding: 20px;
     /* Внутренние отступы, чтобы текст не лип к краям */
-    border-radius: 10px;
-    color: #000000;
-    /* Чуть сероватый текст лучше читается на черном */
-    line-height: 1.8;
-    /* Увеличиваем межстрочный интервал */
-    font-family: sans-serif;
-     font-size: 18px;
+    border-radius: 40px;
+    font-size: 17px;
     margin-bottom: 40px;
     /* Отступ между главами */
     white-space: pre-wrap;
     /* Сохраняет абзацы из текстового файла */
-    
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.8;
+    /* Чтобы строки не слипались */
+    color: #1c1f23;
+
 }
 
 .main-header {
@@ -224,17 +233,17 @@ h2 {
     object-fit: cover;
     width: 100%;
     height: 100vh;
-    transform: translate3d(0, calc(var(--scrollTop) / -3), 0);
+
 }
 
 .layers__hifon2 {
-    top: 300px;
+    top: 150px;
     position: absolute;
     z-index: -1;
     object-fit: cover;
     width: 100%;
     height: 100vh;
-    transform: translate3d(0, calc(var(--scrollTop) / -1.8), 0);
+
 }
 
 .layers__hifon3 {
@@ -244,17 +253,17 @@ h2 {
     object-fit: cover;
     width: 100%;
     height: 100vh;
-    transform: translate3d(0, calc(var(--scrollTop) / -2.5), 0);
+
 }
 
 .layers__hifon4 {
-    top: 200px;
+    top: 100px;
     position: absolute;
     z-index: -1;
     object-fit: cover;
     width: 100%;
     height: 100vh;
-    transform: translate3d(0, calc(var(--scrollTop) / -2), 0);
+
 }
 
 .layer__header {
@@ -267,20 +276,23 @@ h2 {
 
 .layers__caption {
     position: absolute;
+    color: #ffffff;
     top: -90px;
-    left: -500px;
-    font-size: calc(var(--index) / 0.3);
+    left: -150px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    font-size: calc(var(--index) / 0.4);
     letter-spacing: calc(var(--index) / 2.5);
     margin-top: calc(var(--index) * -0.75);
-    transform: translate3d(calc(var(--scrollTop) / -3), calc(var(--scrollTop) / -1), 0);
+    transform: translate3d(calc(var(--scrollTop) / 0.8), calc(var(--scrollTop) / -1), 0);
 }
 
 .layers__title {
     position: absolute;
     top: 30px;
-    left: 100px;
-    font-size: calc(var(--index) / 0.5);
+    left: -270px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    font-size: calc(var(--index) / 0.4);
     letter-spacing: calc(var(--index) / 2.5);
     margin-top: calc(var(--index) * -0.75);
-    transform: translate3d(calc(var(--scrollTop) / 1), calc(var(--scrollTop) / -1), 0);
+    transform: translate3d(calc(var(--scrollTop) / -0.8), calc(var(--scrollTop) / -1), 0);
 }

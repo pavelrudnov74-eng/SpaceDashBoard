@@ -6,10 +6,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Document</title>
+    <title>История космонавтики</title>
 
     <link rel="stylesheet" href="css/history.css">
-    <script src="frontend/js/app.js" defer></script>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Montserrat:wght@300;400&family=Oswald:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <script src="../backend/js/app.js" defer></script>
+    <link rel="icon" href="img/logo.png" type="image/png">
 
 </head>
 
@@ -20,12 +26,12 @@
             <div class="navbar-wrap">
                 <div class="logo">
                     <a href="#">
-                        <img src="himg/logo.png" alt="Logo">
+                        <img src="img/logo.png" alt="Logo">
                     </a>
                 </div>
                 <ul class="navbar-menu">
                     <li><a href="index.html">Расписание</a></li>
-                    <li><a href="agency.html">Агенства</a></li>
+                    <li><a href="agency.html">Агентства</a></li>
                     <li><a href="kosmodrom.html">Космодромы</a></li>
                     <li><a href="ka.html">РН и КА</a></li>
                     <li><a href="history.html">История</a></li>
@@ -41,9 +47,9 @@
                 <div class="layers__caption">История</div>
                 <div class="layers__title">Космонавтики</div>
             </div>
-            <div class="layer layers__base" style="background-image: url(img/fon.png);"></div>
+            <div class="layer layers__base" style="background-image: url(img/history_fon.jpg);"></div>
 
-            <div class="layer layers__front" style="background-image: url(img/history.png);"></div>
+
         </div>
     </header>
     <header class="chapter-header">
@@ -57,11 +63,10 @@
                 </audio>
             </div>
 
-            <!-- Глава 2 -->
             <div class="chapter-wrapper">
                 <button class="chapter-btn" onclick="location.href='#chap2'">Глава 2</button>
                 <audio controls>
-                    <source src="two.mp3" type="audio/mpeg">
+                    <source src="audio/one.mp3" type="audio/mpeg">
                 </audio>
             </div>
             <div class="chapter-wrapper">
@@ -79,20 +84,20 @@
     </header>
     <div class="text">
         <div id="chap1" class="chapter">
-            <h2>Глава 1</h2>
-            <div class="content" data-file="text/Циолковский.txt"></div>
+            <h3>Глава 1</h3>
+            <div class="content" data-file="text/Циолковский.html"></div>
         </div>
         <div id="chap2" class="chapter">
-            <h2>Глава 2</h2>
-            <div class="content" data-file="text/Циолковский.txt"></div>
+            <h3>Глава 2</h3>
+            <div class="content" data-file="text/Циолковский.html"></div>
         </div>
         <div id="chap3" class="chapter">
-            <h2>Глава 3</h2>
-            <div class="content" data-file="text/Циолковский.txt"></div>
+            <h3>Глава 3</h3>
+            <div class="content" data-file="text/Циолковский.html"></div>
         </div>
     </div>
-    <script src="frontend/audio.js"></script>
-    <script src="frontend/text_loud.js"></script>
+    <script src="../backend/js/audio.js"></script>
+    <script src="../backend/js/text_loud.js"></script>
 </body>
 
 </html>
